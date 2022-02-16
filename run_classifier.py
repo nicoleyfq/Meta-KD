@@ -55,7 +55,7 @@ def train(args, train_dataset, model, tokenizer):
     num_train_data = len(train_dataloader)
     if args.max_steps > 0:
         total_steps = args.max_steps
-        args.num_train_epochs = args.max_steps // num_train_data// ga_steps) + 1
+        args.num_train_epochs = args.max_steps // (num_train_data// ga_steps) + 1
     else:
         total_steps = num_train_data // ga_steps * args.num_train_epochs
     args.warmup_steps = int(total_steps * args.warmup_proportion)
@@ -183,8 +183,7 @@ def train(args, train_dataset, model, tokenizer):
                         for kd_param, param in zip(kd_model.parameters(), parameters):
                             # mannully update kd model's parameters 
                             kd_param.sub_((1.0 - decay) * (kd_param - param))
-                if args.local_rank in [-1, 0] and args.logging_steps > 0 
-                               and global_step % args.logging_steps == 0:
+                if args.local_rank in [-1, 0] and args.logging_steps > 0 and global_step % args.logging_steps == 0:
                     print("\n")
                     # Log metrics when sigle GPU
                     if args.local_rank == -1:  

@@ -1,0 +1,6 @@
+.idea
+.ipynb_checkpoints
+bert_base_uncased
+outputs
+**/.DS_Store
+__pycache__
