@@ -18,12 +18,18 @@ Objective:
     - test.tsv
 
 ## How to run code
-1. Download pre-trained [BERT Model](https://huggingface.co/bert-base-uncased) to "./bert_base_uncased" folder. Including following three files:
-    <pre>
-    - pytorch_model.bin
-    - config.json
-    - vocab.txt
-    </pre>
+1. Create folder for model and output under ./Meta-KD
+<pre>
+mkdir outputs
+mkdir bert_base_uncased
+</pre>
+2. 
+Download pre-trained [BERT Model](https://huggingface.co/bert-base-uncased) to "./bert_base_uncased" folder. Including following three files:
+<pre>
+- pytorch_model.bin
+- config.json
+- vocab.txt
+</pre>
 
 3. Run .sh file for training or evaluation:
 
