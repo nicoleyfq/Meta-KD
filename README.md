@@ -1,10 +1,9 @@
 # Meta-KD
 Meta Learning by Knowledge Distillation 
 Objective: 
-* improve teacher model's performance by leveraging knowledge distillation (primary goal)
-(if we have time)
-* improve student model's performance 
-* reduce params of student model 
+* improve teacher model's performance by leveraging knowledge distillation (**primary goal**)
+* improve student model's performance (if we have time)
+* reduce params of student model (if we have time)
 
 ## Algorithm
 ![alt text](./Meta-KD.jpg)
@@ -13,10 +12,11 @@ Objective:
 
 ## Data
 [SST-2](https://gluebenchmark.com/tasks)
+<pre>
     - train.tsv
     - dev.tsv
     - test.tsv
-
+</pre>
 ## How to run code
 1. Create folder for model and output under ./Meta-KD
 <pre>
