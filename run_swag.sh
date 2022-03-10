@@ -1,0 +1,11 @@
+python run_swag.py \
+--model_name_or_path bert-base-uncased \
+--do_train \
+--do_eval \
+--learning_rate 5e-5 \
+--num_train_epochs 1 \
+--logging_dir ./logs/swag_bert/ \
+--per_gpu_eval_batch_size=12 \
+--per_device_train_batch_size=12 \
+--output_dir ./result/swag/ \
+--overwrite_output
